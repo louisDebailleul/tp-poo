@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block title meeting.nom %}
+
+{% block body %}
+
+<h1>{{ meeting.nom }}</h1>
+<br>
+    <ul class="list-group">
+        <li class="list-group-item">Date debut : {{ meeting.dateD }}</li>
+        <li class="list-group-item">Date fin : {{ meeting.dateF }}</li>
+    </ul>
+    <h3>Descriptif</h3>
+    <hr>
+    <p>{{ meeting.descriptif }}</p>
+    <h3>Participent</h3>
+    <hr>
+    <ul class="list-group">
+    {% for participent in participents %}
+
+            <li class="list-group-item"> {{ participent.prenom }} {{ participent.nom }}</li>
+
+    {% endfor %}
+    </ul>
+{% endblock %}
