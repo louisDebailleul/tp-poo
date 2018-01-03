@@ -19,7 +19,7 @@ class MeetingSeeder extends AbstractSeed
         for ($i = 0; $i < 100; ++$i) {
             $date = $faker->unixTime('now');
             $data[] = [
-                'name' => $faker->catchPhrase,
+                'titre' => $faker->catchPhrase,
                 'slug' => $faker->slug
             ];
         }

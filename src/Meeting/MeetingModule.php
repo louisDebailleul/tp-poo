@@ -17,6 +17,6 @@ class MeetingModule extends Module
     {
         $renderer->addPath('meeting', __DIR__ . '/views');
         $router->get($prefix, MeetingAction::class, 'meeting.index');
-        $router->get($prefix . '/{slug:[a-z\-0-9]+}-{id:[0-9]+}', MeetingAction::class, 'meeting.show');
+        $router->get($prefix . '/{slug:[A-Za-z\-0-9]+}-{id:[0-9]+}', MeetingAction::class, 'meeting.show');
     }
 }

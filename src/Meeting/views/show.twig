@@ -4,15 +4,19 @@
 
 {% block body %}
 
-<h1>{{ meeting.nom }}</h1>
+<h1>{{ meeting.titre }}</h1>
 <br>
     <ul class="list-group">
+        <li class="list-group-item">Organisateur : {{ meeting.prenom }} {{ meeting.nom }}</li>
+        <li class="list-group-item">Mail : {{ meeting.email }}</li>
         <li class="list-group-item">Date debut : {{ meeting.dateD }}</li>
         <li class="list-group-item">Date fin : {{ meeting.dateF }}</li>
     </ul>
+    <br>
     <h3>Descriptif</h3>
     <hr>
     <p>{{ meeting.descriptif }}</p>
+    <br>
     <h3>Participent</h3>
     <hr>
     <ul class="list-group">

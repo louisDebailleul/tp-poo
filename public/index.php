@@ -2,7 +2,6 @@
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 $modules = [
-    \App\Blog\BlogModule::class,
     \App\Meeting\MeetingModule::class
 ];
 
